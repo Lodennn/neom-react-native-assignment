@@ -1,4 +1,5 @@
 import {Image, Text, View, StyleSheet} from 'react-native';
+import Tag from '../Tag/Tag';
 
 const ProductCard = ({product}) => {
   return (
@@ -13,18 +14,9 @@ const ProductCard = ({product}) => {
         style={{width: '100%', height: 140, marginVertical: 15}}
       />
       <View style={styles.tags}>
-        <View style={styles.tag}>
-          <Text style={styles.tagTitle}>PRICE</Text>
-          <Text style={styles.tagValue}>{product.price}</Text>
-        </View>
-        <View style={styles.tag}>
-          <Text style={styles.tagTitle}>RATING</Text>
-          <Text style={styles.tagValue}>{product.rating}</Text>
-        </View>
-        <View style={styles.tag}>
-          <Text style={styles.tagTitle}>STOCK</Text>
-          <Text style={styles.tagValue}>{product.stock}</Text>
-        </View>
+        <Tag title={'PRICE'} value={product.price} />
+        <Tag title={'RATING'} value={product.rating} />
+        <Tag title={'STOCK'} value={product.stock} />
       </View>
     </View>
   );
@@ -60,18 +52,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 10,
     justifyContent: 'space-evenly',
-  },
-  tag: {
-    backgroundColor: '#F88',
-    padding: 10,
-    paddingVertical: 5,
-    color: '#FFF',
-    borderRadius: 10,
-    alignItems: 'center',
-  },
-  tagTitle: {
-    fontSize: 10,
-    fontWeight: 'bold',
   },
 });
 
