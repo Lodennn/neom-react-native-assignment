@@ -5,7 +5,6 @@ import ProductsWrapper from '../../components/ProductsWrapper/ProductsWrapper';
 
 const Home = props => {
   const {data: productsData, productsQueryResponse} = useGetProductsQuery();
-  console.log('productsData: ', productsData, productsQueryResponse);
   return (
     <View>
       <View style={styles.mainContainer}>
