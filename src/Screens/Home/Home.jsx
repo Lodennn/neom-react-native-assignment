@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, Pressable} from 'react-native';
 import {useGetProductsQuery} from '../../store/apis';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import ProductsWrapper from '../../components/ProductsWrapper/ProductsWrapper';
@@ -22,7 +22,7 @@ const Home = props => {
 const styles = StyleSheet.create({
   mainContainer: {
     paddingHorizontal: 20,
-    marginTop: 10,
+    marginTop: 15,
   },
   mainTitle: {
     fontSize: 30,

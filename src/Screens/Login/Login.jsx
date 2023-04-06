@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  Alert,
   View,
 } from 'react-native';
 import {useLoginMutation} from '../../store/apis';
@@ -41,6 +42,9 @@ const Login = props => {
         saveUserCredentials(username, password);
         storeUserSession(response);
         dispatch(userActions.login(response));
+      })
+      .catch(err => {
+        Alert.alert('Something went wrong', err.data.message);
       });
   };
   return (

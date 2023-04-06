@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {retrieveUserSession} from '../../services/Storage';
 
 const initialState = {
   isAuth: false,
